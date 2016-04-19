@@ -93,7 +93,7 @@
   Validator.VALIDATORS = {
     'native': function ($el) {
       var el = $el[0]
-      return el.checkValidity ? el.checkValidity() : true
+      return el.checkValidity ? el.validity.valid : true
     },
     'match': function ($el) {
       var target = $el.data('match')
